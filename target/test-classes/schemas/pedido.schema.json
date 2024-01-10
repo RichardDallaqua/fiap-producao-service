@@ -1,0 +1,24 @@
+{
+  "id": "4d09f3d8-8c7b-4c81-9b94-78be7f15d25a",
+  "listaProdutos": [
+    {
+      "id": "c69e74e7-6857-4df7-8c22-063dd451d3d2",
+      "nome": "Produto A",
+      "descricao": "Descrição do Produto A",
+      "preco": 29.99,
+      "categoria": "ACOMPANHAMENTO"
+    },
+    {
+      "id": "a6f85f24-5b9a-4a27-8edc-83a0e2f49a12",
+      "nome": "Produto B",
+      "descricao": "Descrição do Produto B",
+      "preco": 19.99,
+      "categoria": "ACOMPANHAMENTO"
+    }
+  ],
+  "valorTotalDaCompra": 49.98,
+  "quantidadeTotalDeItems": 2,
+  "nomeCliente": "João da Silva",
+  "statusPedido": "ABERTO",
+  "statusPagamento": "AGUARDANDO_PAGAMENTO"
+}
