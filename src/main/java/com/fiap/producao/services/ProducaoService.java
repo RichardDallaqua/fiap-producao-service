@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @Service
-public class PedidoService {
+public class ProducaoService {
 
     @Autowired
     private PedidoDataProvider pedidoGateway;

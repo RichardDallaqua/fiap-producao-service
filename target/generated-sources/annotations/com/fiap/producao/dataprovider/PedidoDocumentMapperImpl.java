@@ -3,7 +3,6 @@ package com.fiap.producao.dataprovider;
 import com.fiap.producao.controller.dto.PedidoResponseDTO;
 import com.fiap.producao.controller.dto.ProdutoResponseDTO;
 import com.fiap.producao.domain.PedidoDomain;
-import com.fiap.producao.domain.PedidoDomain.PedidoDomainBuilder;
 import com.fiap.producao.domain.ProdutoDomain;
 import com.fiap.producao.domain.ProdutoDomain.ProdutoDomainBuilder;
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-08T10:41:39-0300",
+    date = "2024-01-15T18:30:55-0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.9 (Azul Systems, Inc.)"
 )
 @Component
@@ -25,17 +24,17 @@ public class PedidoDocumentMapperImpl implements PedidoDocumentMapper {
             return null;
         }
 
-        PedidoDomainBuilder pedidoDomain = PedidoDomain.builder();
+        PedidoDomain pedidoDomain = new PedidoDomain();
 
-        pedidoDomain.id( response.getId() );
-        pedidoDomain.listaProdutos( produtoResponseDTOListToProdutoDomainList( response.getListaProdutos() ) );
-        pedidoDomain.valorTotalDaCompra( response.getValorTotalDaCompra() );
-        pedidoDomain.quantidadeTotalDeItems( response.getQuantidadeTotalDeItems() );
-        pedidoDomain.nomeCliente( response.getNomeCliente() );
-        pedidoDomain.statusPedido( response.getStatusPedido() );
-        pedidoDomain.statusPagamento( response.getStatusPagamento() );
+        pedidoDomain.setId( response.getId() );
+        pedidoDomain.setListaProdutos( produtoResponseDTOListToProdutoDomainList( response.getListaProdutos() ) );
+        pedidoDomain.setValorTotalDaCompra( response.getValorTotalDaCompra() );
+        pedidoDomain.setQuantidadeTotalDeItems( response.getQuantidadeTotalDeItems() );
+        pedidoDomain.setNomeCliente( response.getNomeCliente() );
+        pedidoDomain.setStatusPedido( response.getStatusPedido() );
+        pedidoDomain.setStatusPagamento( response.getStatusPagamento() );
 
-        return pedidoDomain.build();
+        return pedidoDomain;
     }
 
     protected ProdutoDomain produtoResponseDTOToProdutoDomain(ProdutoResponseDTO produtoResponseDTO) {
