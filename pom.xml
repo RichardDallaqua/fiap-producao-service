@@ -9,9 +9,9 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.fiap</groupId>
-	<artifactId>fiap-producao</artifactId>
+	<artifactId>fiap-producao-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lanchonete</name>
+	<name>fiap-producao-service</name>
 	<description>Aplicativo para curso de engenharia de software</description>
 	<properties>
 		<java.version>17</java.version>
