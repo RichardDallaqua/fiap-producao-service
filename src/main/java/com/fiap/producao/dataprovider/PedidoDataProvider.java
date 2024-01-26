@@ -8,6 +8,7 @@ import com.fiap.producao.domain.PedidoDomain;
 import com.fiap.producao.services.gateways.PedidoGateway;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -19,8 +20,10 @@ import java.util.UUID;
 @Slf4j
 public class PedidoDataProvider implements PedidoGateway {
 
-    private static final String URL_PEDIDO_SERVICE = "https://007z3.wiremockapi.cloud/pedidos/451b7ce3-373e-44a2-8c10-df163540056c/buscar";
-    private static final String URL_PEDIDO_SERVICE_STATUS = "https://007z3.wiremockapi.cloud/pedidos/451b7ce3-373e-44a2-8c10-df163540056c/status/CANCELADO";
+    @Value("${gateways.pedidos.busca}")
+    private static String URL_PEDIDO_SERVICE;
+    @Value("${gateways.pedidos.status}")
+    private static String URL_PEDIDO_SERVICE_STATUS;
 
     @Autowired
     private ObjectMapper objectMapper;

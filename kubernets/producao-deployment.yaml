@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pedido-deployment
+  labels:
+    app: pedido-ms
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pedido-ms
+  template:
+    metadata:
+      labels:
+        app: pedido-ms
+    spec:
+      containers:
+        - name: pedido-ms
+          image: 631068511026.dkr.ecr.us-east-2.amazonaws.com/fiap-pedido-ms:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: lanchonete-config
+
