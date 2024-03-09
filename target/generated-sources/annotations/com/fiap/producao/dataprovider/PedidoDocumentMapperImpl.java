@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-01-25T18:36:00-0300",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.7 (Microsoft)"
+    date = "2024-03-09T16:23:08-0300",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.8 (Oracle Corporation)"
 )
 @Component
 public class PedidoDocumentMapperImpl implements PedidoDocumentMapper {

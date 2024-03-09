@@ -4,4 +4,13 @@ application:
 server:
   port: 8080
   servlet:
-    context-path: /production
+    context-path: /production-ms
+
+gateways:
+  pedidos:
+    busca: "http://localhost:5000/pedido-ms/api/v1/pedidos/{idPedido}/buscar"
+    status: "http://localhost:5000/pedido-ms/api/v1/pedidos/{idPedido}/status/{status}"
+
+
+queue01:
+  pagamento_concluido: pagamento_concluido
