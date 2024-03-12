@@ -23,7 +23,7 @@ public class ProducaoConsumer {
     @Autowired
     private ProducaoService producaoService;
 
-    @RabbitListener(queues = {"${queue01.pagamento_concluido}"})
+    @RabbitListener(queues = {"${queue01.confirma_producao}"})
     public void receive(@Payload String message){
         HashMap<String, String> mensagem = gson.fromJson(message, HashMap.class);
         var producao = fromPagamentoMessage(mensagem);

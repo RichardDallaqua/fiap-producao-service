@@ -13,4 +13,4 @@ gateways:
 
 
 queue01:
-  pagamento_concluido: pagamento_concluido
+  confirma_producao: confirma_producao
