@@ -1,3 +1,3 @@
-com\fiap\producao\services\ProducaoServiceTest.class
-com\fiap\producao\bdd\StepDefinition.class
-com\fiap\producao\bdd\CucumberTest.class
+com/fiap/producao/bdd/CucumberTest.class
+com/fiap/producao/services/ProducaoServiceTest.class
+com/fiap/producao/bdd/StepDefinition.class
