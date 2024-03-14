@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fiap-producao</title>
+<link
+	href="2024-03-14-ZAP-Report-7/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2024-03-14-ZAP-Report-7/themes/original/main.css" rel="stylesheet">
+<link
+	href="2024-03-14-ZAP-Report-7/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>fiap-producao</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2024-03-14-ZAP-Report-7/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on qui. 14 mar. 2024, at 18:48:26</span>
+		</p>
+		<p>ZAP Version: 2.14.0</p>
+		<p>
+			ZAP is supported by the <a href="https://crashoverride.com/open-source">Crash Override Open Source Fellowship</a>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Médio</span>, <span>Confidence</span>=<span
+									class="confidence-level">Alto</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Médio</span>, <span>Confidence</span>=<span
+									class="confidence-level">Médio</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+									class="confidence-level">Alto</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+									class="confidence-level">Médio</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+									class="confidence-level">Baixo</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informativo</span>, <span>Confidence</span>=<span
+									class="confidence-level">Médio</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informativo</span>, <span>Confidence</span>=<span
+									class="confidence-level">Baixo</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://localhost:8081</span></li>
+						<li><span class="site">https://update.googleapis.com</span></li>
+						<li><span class="site">https://optimizationguide-pa.googleapis.com</span></li>
+						<li><span class="site">https://content-autofill.googleapis.com</span></li>
+						<li><span class="site">http://localhost:5000</span></li>
+						<li><span class="site">https://accounts.google.com</span></li>
+						<li><span class="site">http://localhost:9090</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">Alto</span>, <span class="risk-level">Médio</span>, <span class="risk-level">Baixo</span>, <span class="risk-level">Informativo</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Alto</span>, <span class="confidence-level">Médio</span>, <span class="confidence-level">Baixo</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Alto</span>, <span class="confidence-level">Médio</span>, <span class="confidence-level">Baixo</span>, <span class="confidence-level">Falso Positivo</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">Alto</th>
+							<th scope="col">Médio</th>
+							<th scope="col">Baixo</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">Alto</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Médio</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(28,6%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Baixo</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(42,9%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informativo</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(14,3%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(28,6%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(28,6%)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(42,9%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(28,6%)</span></td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>Alto</span><br>  <span
+									class="additional-info-percentages">(= Alto)</span>  
+							</th>
+							<th scope="col">
+								<span>Médio</span><br>   <span
+									class="additional-info-percentages">(&gt;= Médio)</span> 
+							</th>
+							<th scope="col">
+								<span>Baixo</span><br>   <span
+									class="additional-info-percentages">(&gt;= Baixo)</span> 
+							</th>
+							<th scope="col">
+								<span>Informativo</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informativo)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Site</th>
+							<th scope="row">http://localhost:8081</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">https://update.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">https://optimizationguide-pa.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">https://content-autofill.googleapis.com</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+						<tr>
+							
+							<th scope="row">http://localhost:9090</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>12</span><br> <span
+								class="additional-info-percentages">(171,4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Médio</td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(100,0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Divulgação de Data e Hora - Unix</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(85,7%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Strict-Transport-Security Header Not Set</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>14</span><br> <span
+								class="additional-info-percentages">(200,0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Baixo</td>
+							<td><span>7</span><br> <span
+								class="additional-info-percentages">(100,0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level">Informativo</td>
+							<td><span>12</span><br> <span
+								class="additional-info-percentages">(171,4%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">User Agent Fuzzer</a></th>
+							<td class="risk-level">Informativo</td>
+							<td><span>36</span><br> <span
+								class="additional-info-percentages">(514,3%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>7</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Médio</span>, <span>Confidence</span>=<span
+							class="confidence-level">Alto</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:8081/production-ms/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (678 bytes)</summary>
+				
+				<pre><code>GET http://localhost:8081/production-ms/ HTTP/1.1
+host: localhost:8081
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+sec-ch-ua: &quot;Chromium&quot;;v=&quot;122&quot;, &quot;Not(A:Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;122&quot;
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: &quot;Windows&quot;
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (275 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: text/html;charset=UTF-8
+Content-Language: pt-BR
+Content-Length: 275
+Date: Thu, 14 Mar 2024 21:47:27 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (275 bytes)</summary>
+				
+				<pre><code>&lt;html&gt;&lt;body&gt;&lt;h1&gt;Whitelabel Error Page&lt;/h1&gt;&lt;p&gt;This application has no explicit mapping for /error, so you are seeing this as a fallback.&lt;/p&gt;&lt;div id=&#39;created&#39;&gt;Thu Mar 14 18:47:27 BRT 2024&lt;/div&gt;&lt;div&gt;There was an unexpected error (type=Not Found, status=404).&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Médio</span>, <span>Confidence</span>=<span
+							class="confidence-level">Médio</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://optimizationguide-pa.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://optimizationguide-pa.googleapis.com/downloads?name=1708452286&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (523 bytes)</summary>
+				
+				<pre><code>GET https://optimizationguide-pa.googleapis.com/downloads?name=1708452286&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS HTTP/1.1
+host: optimizationguide-pa.googleapis.com
+Connection: keep-alive
+X-Goog-Api-Key: AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (455 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+X-GUploader-UploadID: ABPtcPoQoqZAOUaWs-6XoP8BYRolzbgAoDJt6TszNvOIAi3kSAC7cPjzs6OmGvgLHGgnNA0rBH8QMLTQ-g
+Vary: X-Goog-Api-Key
+Cache-Control: public, max-age=86400
+Date: Thu, 14 Mar 2024 21:45:53 GMT
+Expires: Fri, 15 Mar 2024 21:45:53 GMT
+Accept-Ranges: bytes
+X-Goog-Hash: crc32c=cQqwUA==
+Content-Length: 4962
+Server: UploadServer
+Content-Type: text/html; charset=UTF-8
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (4962 bytes)</summary>
+				
+				<pre><code>Cr24   E  �
+�0�&quot;0	*�H�� � 0�
+� �:2�W�))���I��5_U(I7nzԂ��2[�;�H�ǦS��٨/���nb%Yx�6�]i�����u���PDF�iLJK�?��l����R��|���j�C�j!%&#39;�s��[�&quot;�
+�Gy�
+�=l).�=�l\���4蠕�Q!$e�=���C�1�%d��B�ݖK�[�l,�����7��	�y�$7J�G&amp;TT��W�-=jgs[���&amp;�@/гj$���+��yk|l^��Km)\Yx��}OCXf��	��A5s7�8�o����L�(p[��^e�Ȃ���㟪?&amp;X�:~,�)��C�nʯ��Hh�����&lt;�N�0.����woa6��&#39;&amp;y����tHƔ�*7@�a�t�����F�YQU�����&lt;�����m!.^�#f�&#39;F&quot;��lt�97U3f��WM˦�]Lw���)�x��)��Hy Z���l�a�)J~&#39;�y�o�NS�#�,6D�9UMW�l&gt;pa�WG䍇^�L,��B���&quot;p�Y�	ĸ��&lt;��� �������)SkE��f��(����&gt;��=���Y�O�G��&amp;����$�Y/=���#	v�p��Xj��yJ=ԸUJ&quot;JHS�� ��*̈́a���3�v�eK��ͫ��@��Z����{c��V�_Y1�S�OWU�}��@�M�Z��cy{��&lt;n�X�u/{���f��og&amp;(2���..�Q��$]GD6
+�\�h��F?7(��gK��K�}͢Թ��rR���l�
+Nғ��XtR+^�L2{��x�3&lt;0�씢Z��+.O-�������R�j��׫��8Y� ��
+��Kt=�D���?�[�M��pY���z�1���RG����u�7�&quot;&amp;��?%��\�{��p!�x��7���oG?A���
+�|Y&gt;�H�S�5�؀�6[�3	g�&#39;xT*��]�K��Z^&lt;���MN��N�#g�IFB�7Pjϖ�1����e���(�+`t93���52[����.J�6B���4U�9�	 �r���tq��KC��n5�`�G�������
+0xE:?�Җ*��PK  ��TX               model-info.pb���w��:6%F&amp;���\)%��z����9����z�����^AQfYbr�^yjRAjQnfqqf~^AQjJfr	�U�Wf��� �@��槤����$�$�$
+�r�021����sprq�0J0��=�c�%����`&#39;���`/���`���o��  PKC����   �   PK  ��TX               model.tflite��LTW�/J�&quot;���ک���Q�R~�hQ)��ۥ��3��a��-k�1[���iȦi̦1�1�l��m��m�-k�,ٸ벻�.�.kٖZ��ED�~ϼ��޻C*��|2������w�}?X)����޴D8�J�*����}�&quot;���@q�5�1S��B��9 �Š�i�����l��=��o߽�agE]IyI]	�&amp;�c&#39;��;%���!p���A��&#39;vc������$� ��1�ZA3�y ��I���&#39;A;h��
+䀕 ��	1.�~�zA78�@&#39;8	:�qp��V��^P�@1�� 8@*H�@�q|]#`\�����9�:�I���c���i�]��C�|;�#7/&lt;��o&quot;&lt;摱�����쌬���)�G1�2�rh�����Ձ��4h^�
+B��@;8N��8	���4�g�9�&gt;�=�|����%0��0���`������C 5�Qi���wߔ�i����D���{����K�����m!.K�_�깢Ҷc��hέ���\-����$���G�+ʖ�?RYT*m�ܼ�Zi���)EM���[�������႟ފ���W{n|�A��Ҿ�?/-̾����ϚV�@5�u`/�������Et�Wo�u��}8�CnWFx�-	g&amp;y���L��T{��Q ��u�-N��&lt;6бQ]�d&amp;�&quot;�p\�F�	�1��@h�`�&gt;O�xA:G����L��QCz�	P�5�&amp;D�j�&gt;G�$�\�A�㴕��y^:�iz��|�N��g�s�r�,�;@e�~�a?ȸ��AÎ$lU�pħ,�sIu}|@������L�v�a���E������#�̇$�8�6�� ����`-XOzA����P����tۉF����&amp;:�Tp|��
+�SC�O륺�����M�T$F�,�9���&gt;���5����m	(�$\�l�m)k)d��#6��M	S����K���Ξ������훢�#��XW��N�u�Ro���]ȱi�W��&amp;�����p[B����+��p�O��4��R̟�&lt;�����IƸ&lt;�yȷ�K�}\�ٖ��-`+���}\����l��}\��;����K��ڹ�W�ѯ���J�m���A��o�ǧ��������I����}��I�5%|^�&quot;���&amp;��M�����e��|n�b��k�&gt;�ۧ��&quot;n��u��aՒ��)�
+-g9�F�Id-/�Vkd�ֲ�㐖]������o��	��Q���z��&lt;�����e�u�_5���ۯ��O��?y���?�����G�ğd�t������ߧ�������?��%~=ۯ��O��(�&#39;��&#39;��	�?��j��=l�ƶ���8~�f�?���s�9�T��+u���1��㿩�_����Ȝ^6��iJkk{&#39;����=
+Ʊ���c�Ɵ����o�#�x_��_C�&#39;4i��1E�8�t.��H@:ud�Al�� k)��`�����0
+�i�i`����	�T�DЇL��{� Qz1 ���ڐ�!L�*p�p�0R΢���H�NT^0�DT�ntp	����t98�����xi͈��H��V����9�u`A�~}��|.�W��&#39;_7S�9�4��}�SM���������f�ӵ�5�vy^	�7���&amp;g���	y�AiN��aE4��6��F�m�^�7��u�^�~O��1�sY��1�v�kCح�����mx�#���!{|Z��Y�w!~~$�����w��3l����o��EC�`��������Үv�w�n�����q�������6�Cr��h��;n�����Z*|h���(8C��%&amp;=P�5��2�2aW+=χe��[��S�y�+�l{��:VZ�&gt;wC��no�ۉ�4���)U�D�����ژ������n_�r�,��d�Wkje�4=?�����!��}�C9�Q�Mg���Tʚ�,��?�V�t���ղ����Jt}�d}d�:�i/�+}����tz�yL�F�&gt;Q,�g�4�+=.�_�fg�[H�:4b�Wkj��
+���X�hku�\垖�)?�+�U(�5s Zj�X�6w0t0���d��L)��uq�e��`�-Fz�d�s�����%��i|��r:����\Zk�/&gt;�ϙ�y�X���g�9�Eɋ�T�Ʃ�{�̗�-�V&amp;a��#=QJ崦�_��5�,����lj���e�JyN�F���tm�:Y������M*���&lt;u�\&#39;s���=�H�\&amp;�\��K{���k��~�?��6�D�r�/�5i3�Y�8��c-e^����ޚ���5�iM�jԮ��K5Z��CsE,��9�!�����㳉��eё4:��������=t_�բ�-���]�pZ&lt;Azv�%Y�y��,�|I�r6��5�GK�r�}���b�5G���Bl�ȇ�Y�U{��dȢ�v{�XSɡ�������}����rϸ�8��]W�b&gt;Cמ�V_�kڠ����l�BӶ����J�tF�i�BSҵ�̩5E�S����)�T&#39;4�0��=A���T���
+]k�ʻ��uE���n�5=��t�z��9�?Q$J�4�Д������j2M)��7��k�{��Z&gt;vc6�iMQ���e��]���c_���JK���QhyB�%il6k�i-Q*�YK�7v-��º996���BK�c�C���9q|3������UG�R��]�j�������D�4�����BK޷w5o�T�����kq(���в#Z��ӓ5��=_&quot;	���;�9�3�	5g���C�yY|����-ݗl�U܇6�_�R�h�K��H�v���ힷ����x�S�nӟ��w ���&#39;!��O��B�S5���#��Ƥ9�9�j�M�zD�[�~=j�lï��g����~YB���]����sS�i��l�_�����f��j�v�2�&gt;ľ甾y&amp;�-����*}sM�o[|d��	��s��.f_��w��3|`�N�o��w��7�}���L�oX|�o�-�o�����̾uJ�,�=&amp;���O��ǘ�~�م�ɶ����k4�}&gt;~��&amp;&quot;�����5���S�Y�qR�ϴ_�C3�=E�#]�q1h���&quot;D�P����oe��{DF��6�s9RÓ��H3]������H�L����y��z&lt;�U�s�=f�%�ۺΙ��d�G1�Yb!�*uLi=`?���~D�36+���s�t�՚=�# ρv�{P�&#39;eЈ�&quot;�\K�S�\���m^�q��Y/�Y���èVNr���2/�6�,Z���6��E�S������{���y����G�~/����u���=�m,ӵ,���ҩ�.M���K�&quot;&gt;lKz^���ڮ��)|vth�=|^HB/	�&quot;��ƻ��v��&gt;���wK��?/ǧ��/b��{�~�c3��������p��J}��PKS���~  �1  PK  ��TXC����   �             $    model-info.pbPK  ��TXS���~  �1            $�   model.tflitePK      u   �    </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+							class="confidence-level">Alto</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://update.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Strict-Transport-Security Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://update.googleapis.com/service/update2/json</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (370 bytes)</summary>
+				
+				<pre><code>POST https://update.googleapis.com/service/update2/json HTTP/1.1
+host: update.googleapis.com
+Connection: keep-alive
+Content-Length: 1334
+Content-Type: application/json
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (1334 bytes)</summary>
+				
+				<pre><code>{&quot;request&quot;:{&quot;@os&quot;:&quot;win&quot;,&quot;@updater&quot;:&quot;chrome&quot;,&quot;acceptformat&quot;:&quot;crx3,puff&quot;,&quot;app&quot;:[{&quot;appid&quot;:&quot;kiabhabjdbkjdpjbpigfodbdjmbglcoo&quot;,&quot;brand&quot;:&quot;GGLS&quot;,&quot;cohort&quot;:&quot;1:v3l:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;event&quot;:[{&quot;download_time_ms&quot;:4053,&quot;downloaded&quot;:7710,&quot;downloader&quot;:&quot;bits&quot;,&quot;eventresult&quot;:1,&quot;eventtype&quot;:14,&quot;nextversion&quot;:&quot;2024.1.2.1&quot;,&quot;previousversion&quot;:&quot;0.0.0.0&quot;,&quot;total&quot;:7710,&quot;url&quot;:&quot;http://edgedl.me.gvt1.com/edgedl/release2/chrome_component/adwe425xlzq32gxl5bw24qdolbda_2024.1.2.1/kiabhabjdbkjdpjbpigfodbdjmbglcoo_2024.01.02.01_all_acdbyptqku3alt5j2pnkq6jnq75q.crx3&quot;},{&quot;eventresult&quot;:1,&quot;eventtype&quot;:3,&quot;nextfp&quot;:&quot;1.4a6508925b2ffec931c1e3931ddeb15ca41d820a8264cd5a962b526e9932bcdf&quot;,&quot;nextversion&quot;:&quot;2024.1.2.1&quot;,&quot;previousversion&quot;:&quot;0.0.0.0&quot;}],&quot;installdate&quot;:6282,&quot;lang&quot;:&quot;pt-BR&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.4a6508925b2ffec931c1e3931ddeb15ca41d820a8264cd5a962b526e9932bcdf&quot;}]},&quot;version&quot;:&quot;2024.1.2.1&quot;}],&quot;arch&quot;:&quot;x64&quot;,&quot;dedup&quot;:&quot;cr&quot;,&quot;domainjoined&quot;:false,&quot;hw&quot;:{&quot;avx&quot;:true,&quot;physmemory&quot;:32,&quot;sse&quot;:true,&quot;sse2&quot;:true,&quot;sse3&quot;:true,&quot;sse41&quot;:true,&quot;sse42&quot;:true,&quot;ssse3&quot;:true},&quot;ismachine&quot;:true,&quot;nacl_arch&quot;:&quot;x86-64&quot;,&quot;os&quot;:{&quot;arch&quot;:&quot;x86_64&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;version&quot;:&quot;10.0.19045.4170&quot;},&quot;prodversion&quot;:&quot;122.0.6261.113&quot;,&quot;protocol&quot;:&quot;3.1&quot;,&quot;requestid&quot;:&quot;{229de309-8a09-48cd-9efa-163515ad8d7f}&quot;,&quot;sessionid&quot;:&quot;{416c6488-cb02-4a0d-887f-b4f47a442d4c}&quot;,&quot;updaterversion&quot;:&quot;122.0.6261.113&quot;}}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (714 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Security-Policy: script-src &#39;report-sample&#39; &#39;nonce-jgx44d2-vN2iSHDGBPSVPw&#39; &#39;unsafe-inline&#39; &#39;strict-dynamic&#39; https: http:;object-src &#39;none&#39;;base-uri &#39;self&#39;;report-uri https://csp.withgoogle.com/csp/clientupdate-aus/1
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 14 Mar 2024 21:43:55 GMT
+Content-Type: application/json; charset=utf-8
+X-Daynum: 6282
+X-Daystart: 53035
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Accept-Encoding
+content-length: 218
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (218 bytes)</summary>
+				
+				<pre><code>)]}&#39;
+{&quot;response&quot;:{&quot;server&quot;:&quot;prod&quot;,&quot;protocol&quot;:&quot;3.1&quot;,&quot;daystart&quot;:{&quot;elapsed_seconds&quot;:53035,&quot;elapsed_days&quot;:6282},&quot;app&quot;:[{&quot;appid&quot;:&quot;kiabhabjdbkjdpjbpigfodbdjmbglcoo&quot;,&quot;status&quot;:&quot;ok&quot;,&quot;event&quot;:[{&quot;status&quot;:&quot;ok&quot;},{&quot;status&quot;:&quot;ok&quot;}]}]}}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+							class="confidence-level">Médio</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://optimizationguide-pa.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://optimizationguide-pa.googleapis.com/downloads?name=1708452286&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (523 bytes)</summary>
+				
+				<pre><code>GET https://optimizationguide-pa.googleapis.com/downloads?name=1708452286&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS HTTP/1.1
+host: optimizationguide-pa.googleapis.com
+Connection: keep-alive
+X-Goog-Api-Key: AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (455 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+X-GUploader-UploadID: ABPtcPoQoqZAOUaWs-6XoP8BYRolzbgAoDJt6TszNvOIAi3kSAC7cPjzs6OmGvgLHGgnNA0rBH8QMLTQ-g
+Vary: X-Goog-Api-Key
+Cache-Control: public, max-age=86400
+Date: Thu, 14 Mar 2024 21:45:53 GMT
+Expires: Fri, 15 Mar 2024 21:45:53 GMT
+Accept-Ranges: bytes
+X-Goog-Hash: crc32c=cQqwUA==
+Content-Length: 4962
+Server: UploadServer
+Content-Type: text/html; charset=UTF-8
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (4962 bytes)</summary>
+				
+				<pre><code>Cr24   E  �
+�0�&quot;0	*�H�� � 0�
+� �:2�W�))���I��5_U(I7nzԂ��2[�;�H�ǦS��٨/���nb%Yx�6�]i�����u���PDF�iLJK�?��l����R��|���j�C�j!%&#39;�s��[�&quot;�
+�Gy�
+�=l).�=�l\���4蠕�Q!$e�=���C�1�%d��B�ݖK�[�l,�����7��	�y�$7J�G&amp;TT��W�-=jgs[���&amp;�@/гj$���+��yk|l^��Km)\Yx��}OCXf��	��A5s7�8�o����L�(p[��^e�Ȃ���㟪?&amp;X�:~,�)��C�nʯ��Hh�����&lt;�N�0.����woa6��&#39;&amp;y����tHƔ�*7@�a�t�����F�YQU�����&lt;�����m!.^�#f�&#39;F&quot;��lt�97U3f��WM˦�]Lw���)�x��)��Hy Z���l�a�)J~&#39;�y�o�NS�#�,6D�9UMW�l&gt;pa�WG䍇^�L,��B���&quot;p�Y�	ĸ��&lt;��� �������)SkE��f��(����&gt;��=���Y�O�G��&amp;����$�Y/=���#	v�p��Xj��yJ=ԸUJ&quot;JHS�� ��*̈́a���3�v�eK��ͫ��@��Z����{c��V�_Y1�S�OWU�}��@�M�Z��cy{��&lt;n�X�u/{���f��og&amp;(2���..�Q��$]GD6
+�\�h��F?7(��gK��K�}͢Թ��rR���l�
+Nғ��XtR+^�L2{��x�3&lt;0�씢Z��+.O-�������R�j��׫��8Y� ��
+��Kt=�D���?�[�M��pY���z�1���RG����u�7�&quot;&amp;��?%��\�{��p!�x��7���oG?A���
+�|Y&gt;�H�S�5�؀�6[�3	g�&#39;xT*��]�K��Z^&lt;���MN��N�#g�IFB�7Pjϖ�1����e���(�+`t93���52[����.J�6B���4U�9�	 �r���tq��KC��n5�`�G�������
+0xE:?�Җ*��PK  ��TX               model-info.pb���w��:6%F&amp;���\)%��z����9����z�����^AQfYbr�^yjRAjQnfqqf~^AQjJfr	�U�Wf��� �@��槤����$�$�$
+�r�021����sprq�0J0��=�c�%����`&#39;���`/���`���o��  PKC����   �   PK  ��TX               model.tflite��LTW�/J�&quot;���ک���Q�R~�hQ)��ۥ��3��a��-k�1[���iȦi̦1�1�l��m��m�-k�,ٸ벻�.�.kٖZ��ED�~ϼ��޻C*��|2������w�}?X)����޴D8�J�*����}�&quot;���@q�5�1S��B��9 �Š�i�����l��=��o߽�agE]IyI]	�&amp;�c&#39;��;%���!p���A��&#39;vc������$� ��1�ZA3�y ��I���&#39;A;h��
+䀕 ��	1.�~�zA78�@&#39;8	:�qp��V��^P�@1�� 8@*H�@�q|]#`\�����9�:�I���c���i�]��C�|;�#7/&lt;��o&quot;&lt;摱�����쌬���)�G1�2�rh�����Ձ��4h^�
+B��@;8N��8	���4�g�9�&gt;�=�|����%0��0���`������C 5�Qi���wߔ�i����D���{����K�����m!.K�_�깢Ҷc��hέ���\-����$���G�+ʖ�?RYT*m�ܼ�Zi���)EM���[�������႟ފ���W{n|�A��Ҿ�?/-̾����ϚV�@5�u`/�������Et�Wo�u��}8�CnWFx�-	g&amp;y���L��T{��Q ��u�-N��&lt;6бQ]�d&amp;�&quot;�p\�F�	�1��@h�`�&gt;O�xA:G����L��QCz�	P�5�&amp;D�j�&gt;G�$�\�A�㴕��y^:�iz��|�N��g�s�r�,�;@e�~�a?ȸ��AÎ$lU�pħ,�sIu}|@������L�v�a���E������#�̇$�8�6�� ����`-XOzA����P����tۉF����&amp;:�Tp|��
+�SC�O륺�����M�T$F�,�9���&gt;���5����m	(�$\�l�m)k)d��#6��M	S����K���Ξ������훢�#��XW��N�u�Ro���]ȱi�W��&amp;�����p[B����+��p�O��4��R̟�&lt;�����IƸ&lt;�yȷ�K�}\�ٖ��-`+���}\����l��}\��;����K��ڹ�W�ѯ���J�m���A��o�ǧ��������I����}��I�5%|^�&quot;���&amp;��M�����e��|n�b��k�&gt;�ۧ��&quot;n��u��aՒ��)�
+-g9�F�Id-/�Vkd�ֲ�㐖]������o��	��Q���z��&lt;�����e�u�_5���ۯ��O��?y���?�����G�ğd�t������ߧ�������?��%~=ۯ��O��(�&#39;��&#39;��	�?��j��=l�ƶ���8~�f�?���s�9�T��+u���1��㿩�_����Ȝ^6��iJkk{&#39;����=
+Ʊ���c�Ɵ����o�#�x_��_C�&#39;4i��1E�8�t.��H@:ud�Al�� k)��`�����0
+�i�i`����	�T�DЇL��{� Qz1 ���ڐ�!L�*p�p�0R΢���H�NT^0�DT�ntp	����t98�����xi͈��H��V����9�u`A�~}��|.�W��&#39;_7S�9�4��}�SM���������f�ӵ�5�vy^	�7���&amp;g���	y�AiN��aE4��6��F�m�^�7��u�^�~O��1�sY��1�v�kCح�����mx�#���!{|Z��Y�w!~~$�����w��3l����o��EC�`��������Үv�w�n�����q�������6�Cr��h��;n�����Z*|h���(8C��%&amp;=P�5��2�2aW+=χe��[��S�y�+�l{��:VZ�&gt;wC��no�ۉ�4���)U�D�����ژ������n_�r�,��d�Wkje�4=?�����!��}�C9�Q�Mg���Tʚ�,��?�V�t���ղ����Jt}�d}d�:�i/�+}����tz�yL�F�&gt;Q,�g�4�+=.�_�fg�[H�:4b�Wkj��
+���X�hku�\垖�)?�+�U(�5s Zj�X�6w0t0���d��L)��uq�e��`�-Fz�d�s�����%��i|��r:����\Zk�/&gt;�ϙ�y�X���g�9�Eɋ�T�Ʃ�{�̗�-�V&amp;a��#=QJ崦�_��5�,����lj���e�JyN�F���tm�:Y������M*���&lt;u�\&#39;s���=�H�\&amp;�\��K{���k��~�?��6�D�r�/�5i3�Y�8��c-e^����ޚ���5�iM�jԮ��K5Z��CsE,��9�!�����㳉��eё4:��������=t_�բ�-���]�pZ&lt;Azv�%Y�y��,�|I�r6��5�GK�r�}���b�5G���Bl�ȇ�Y�U{��dȢ�v{�XSɡ�������}����rϸ�8��]W�b&gt;Cמ�V_�kڠ����l�BӶ����J�tF�i�BSҵ�̩5E�S����)�T&#39;4�0��=A���T���
+]k�ʻ��uE���n�5=��t�z��9�?Q$J�4�Д������j2M)��7��k�{��Z&gt;vc6�iMQ���e��]���c_���JK���QhyB�%il6k�i-Q*�YK�7v-��º996���BK�c�C���9q|3������UG�R��]�j�������D�4�����BK޷w5o�T�����kq(���в#Z��ӓ5��=_&quot;	���;�9�3�	5g���C�yY|����-ݗl�U܇6�_�R�h�K��H�v���ힷ����x�S�nӟ��w ���&#39;!��O��B�S5���#��Ƥ9�9�j�M�zD�[�~=j�lï��g����~YB���]����sS�i��l�_�����f��j�v�2�&gt;ľ甾y&amp;�-����*}sM�o[|d��	��s��.f_��w��3|`�N�o��w��7�}���L�oX|�o�-�o�����̾uJ�,�=&amp;���O��ǘ�~�م�ɶ����k4�}&gt;~��&amp;&quot;�����5���S�Y�qR�ϴ_�C3�=E�#]�q1h���&quot;D�P����oe��{DF��6�s9RÓ��H3]������H�L����y��z&lt;�U�s�=f�%�ۺΙ��d�G1�Yb!�*uLi=`?���~D�36+���s�t�՚=�# ρv�{P�&#39;eЈ�&quot;�\K�S�\���m^�q��Y/�Y���èVNr���2/�6�,Z���6��E�S������{���y����G�~/����u���=�m,ӵ,���ҩ�.M���K�&quot;&gt;lKz^���ڮ��)|vth�=|^HB/	�&quot;��ƻ��v��&gt;���wK��?/ǧ��/b��{�~�c3��������p��J}��PKS���~  �1  PK  ��TXC����   �             $    model-info.pbPK  ��TXS���~  �1            $�   model.tflitePK      u   �    </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Baixo</span>, <span>Confidence</span>=<span
+							class="confidence-level">Baixo</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://optimizationguide-pa.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Divulgação de Data e Hora - Unix</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">POST https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Um carimbo de data/hora foi divulgado pela aplicação/servidor web - Unix</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>1679317318, que avalia: 2023-03-20 10:01:58</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (518 bytes)</summary>
+				
+				<pre><code>POST https://optimizationguide-pa.googleapis.com/v1:GetModels?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw HTTP/1.1
+host: optimizationguide-pa.googleapis.com
+Connection: keep-alive
+Content-Length: 856
+Content-Type: application/x-protobuf
+X-Client-Data: CI+QywE=
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (856 bytes)</summary>
+				
+				<pre><code>
+ 
+e 2_
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.PageEntitiesModelMetadata
+	 
+e 2_
+Wtype.googleapis.com/google.internal.chrome.optimizationguide.v1.PageTopicsModelMetadata0
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+ 
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+ 
+g 2a
+Ytype.googleapis.com/google.internal.chrome.optimizationguide.v1.SegmentationModelMetadataJ
+u 2o
+itype.googleapis.com/google.internal.chrome.optimizationguide.v1.HistoryClustersModuleRankingModelMetadata
+H&quot; 2B
+&lt;type.googleapis.com/lens.prime.csc.VisualSearchModelMetadata*pt-BR2</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (408 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Content-Type: application/x-protobuf
+Content-Disposition: attachment
+Vary: X-Origin
+Vary: Referer
+Date: Thu, 14 Mar 2024 21:45:52 GMT
+Server: ESF
+Cache-Control: private
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Origin,Accept-Encoding
+content-length: 1962
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (1962 bytes)</summary>
+				
+				<pre><code>
+
+Æ²á &quot;HR u*shttps://optimizationguide-pa.googleapis.com/downloads?name=1679317318&amp;target=OPTIMIZATION_TARGET_LANGUAGE_DETECTION
+»
+®	¾ÓÓ®&quot;2
+dtype.googleapis.com/google.privacy.webpermissionpredictions.v1.WebPermissionPredictionsModelMetadata-
+	
+ %ÍÌL&gt;*  &gt;   ?  @?%)\O?BH R *https://optimizationguide-pa.googleapis.com/downloads?name=1708452286&amp;target=OPTIMIZATION_TARGET_NOTIFICATION_PERMISSION_PREDICTIONS
+
+¨&quot;2u
+Wtype.googleapis.com/google.internal.chrome.optimizationguide.v1.PageTopicsModelMetadata
+×#&lt;  &gt;%ÍÌL?0:
+override_list.pb.gz:
+VERSION.txtHR h*fhttps://optimizationguide-pa.googleapis.com/downloads?name=4&amp;target=OPTIMIZATION_TARGET_PAGE_TOPICS_V2
+º
+®øÍ®&quot;2
+dtype.googleapis.com/google.privacy.webpermissionpredictions.v1.WebPermissionPredictionsModelMetadata-
+	
+ %&gt;*  &gt;   ?
+×#?%33s?BH R *https://optimizationguide-pa.googleapis.com/downloads?name=1708358670&amp;target=OPTIMIZATION_TARGET_GEOLOCATION_PERMISSION_PREDICTIONS
+
+¼íò®&quot;
+2e
+_type.googleapis.com/google.internal.chrome.optimizationguide.v1.ClientSidePhishingModelMetadata:
+visual_model_desktop.tfliteBH R w*uhttps://optimizationguide-pa.googleapis.com/downloads?name=1708963516&amp;target=OPTIMIZATION_TARGET_CLIENT_SIDE_PHISHING
+£
+Ï­¦&quot;2w
+itype.googleapis.com/google.internal.chrome.optimizationguide.v1.HistoryClustersModuleRankingModelMetadata
+BR *https://optimizationguide-pa.googleapis.com/downloads?name=1691042511&amp;target=OPTIMIZATION_TARGET_NEW_TAB_PAGE_HISTORY_CLUSTERS_MODULE_RANKING
+È
+Ä&quot;³¥&quot;2®
+&lt;type.googleapis.com/lens.prime.csc.VisualSearchModelMetadatan
+l
+
+		%  ÈB
+
+	
+%  ÈB
+
+	%ffæ&gt;
+
+%
+×#&lt;
+
+	%  @
+	%   ?
+	%   ?
+%   ?BêIR *}https://optimizationguide-pa.googleapis.com/downloads?name=1689043206&amp;target=OPTIMIZATION_TARGET_VISUAL_SEARCH_CLASSIFICATION</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>1679317318</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Confirme manualmente se os dados do carimbo de data/hora não são confidenciais e se os dados não podem ser agregados para divulgar padrões exploráveis.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+						
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informativo</span>, <span>Confidence</span>=<span
+							class="confidence-level">Médio</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://localhost:9090</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">User Agent Fuzzer</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://localhost:9090/fiap-payments/api/v1/payments</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (197 bytes)</summary>
+				
+				<pre><code>GET http://localhost:9090/fiap-payments/api/v1/payments HTTP/1.1
+host: localhost:9090
+user-agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+pragma: no-cache
+cache-control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (338 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Date: Thu, 14 Mar 2024 21:14:30 GMT
+content-length: 118
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (118 bytes)</summary>
+				
+				<pre><code>{&quot;timestamp&quot;:&quot;2024-03-14T21:14:31.440+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/fiap-payments/api/v1/payments&quot;}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>Cabeçalho do Agente de Usuário</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)</code></pre></td>
+	</tr>
+	
+	
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informativo</span>, <span>Confidence</span>=<span
+							class="confidence-level">Baixo</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						
+						
+						
+						
+						
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://content-autofill.googleapis.com</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Re-examine Cache-control Directives</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIyLjAuNjI2MS4xMTMSIAlunE71hp83uBIFDTQ30ysSBQ3c5MosIdCkzK_phCFy?alt=proto</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (592 bytes)</summary>
+				
+				<pre><code>GET https://content-autofill.googleapis.com/v1/pages/ChVDaHJvbWUvMTIyLjAuNjI2MS4xMTMSIAlunE71hp83uBIFDTQ30ysSBQ3c5MosIdCkzK_phCFy?alt=proto HTTP/1.1
+host: content-autofill.googleapis.com
+Connection: keep-alive
+X-Goog-Encode-Response-If-Executable: base64
+X-Goog-Api-Key: AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+X-Client-Data: CNz5ygE=
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: empty
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (460 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Cache-Control: private,max-age=604800
+Content-Type: text/plain
+X-Goog-Safety-Encoding: base64
+X-Goog-Safety-Content-Type: application/x-protobuf
+Vary: X-Origin
+Vary: Referer
+Date: Thu, 14 Mar 2024 21:41:22 GMT
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000
+Accept-Ranges: none
+Vary: Origin,Accept-Encoding
+content-length: 28
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (28 bytes)</summary>
+				
+				<pre><code>ChIKBw00N9MrGgAKBw3c5MosGgA=</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>cache-control</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>private,max-age=604800</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+						
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a
+											href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a
+											href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="http://content-security-policy.com/">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Divulgação de Data e Hora - Unix</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10096/">Divulgação de Data e Hora</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Strict-Transport-Security Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10035/">Strict-Transport-Security Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+										<li><a
+											href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a></li>
+										<li><a
+											href="http://caniuse.com/stricttransportsecurity">http://caniuse.com/stricttransportsecurity</a></li>
+										<li><a
+											href="http://tools.ietf.org/html/rfc6797">http://tools.ietf.org/html/rfc6797</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></li>
+										<li><a
+											href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>User Agent Fuzzer</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/wstg">https://owasp.org/wstg</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
