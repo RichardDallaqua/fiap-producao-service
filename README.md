@@ -1,12 +1,12 @@
 # FIAP Lanchonete Service
 
-O FIAP Lanchonete Service é um projeto escrito em Java que simula o funcionamento de uma lanchonete. Ele oferece funcionalidades como registro de pedidos, gerenciamento de cardápio e controle de estoque.
+O FIAP produção service é um projeto escrito em Java que simula pedidos de uma lanchonete. Ele oferece funcionalidades como registro de pedidos, gerenciamento de cardápio.
+
 Funcionalidades
 
 O projeto possui as seguintes funcionalidades:
 
  - Registro de pedidos: permite que os clientes façam pedidos, selecionando itens do cardápio e suas respectivas quantidades.
- - Gerenciamento de cardápio: possibilita a adição, remoção e atualização de itens do cardápio da lanchonete, incluindo informações como nome, preço e disponibilidade.
  - Cadastro de cliente: possibilita a adição, remoção e atualização de clientes, incluindo informações como nome, cpf e endereço.
    
 # Requisitos
