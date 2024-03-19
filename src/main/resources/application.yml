@@ -12,7 +12,7 @@ gateways:
     status: "http://localhost:5000/pedido-ms/api/v1/pedidos/{idPedido}/status/{status}"
 spring:
   rabbitmq:
-    addresses: amqps://b-4885be68-aa8d-41e7-82e6-71dc375cb847.mq.us-east-1.amazonaws.com:5671
+    addresses: ${RABBIT_HOST:localhost}
     username: ${RABBIT_USER:teste}
     password: ${RABBIT_PASS:teste}
     virtual-host: rabbit
