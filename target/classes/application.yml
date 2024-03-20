@@ -8,9 +8,9 @@ server:
 
 gateways:
   pedidos:
-    busca: "http://localhost:5000/pedido-ms/api/v1/pedidos/{idPedido}/buscar"
-    status: "http://localhost:5000/pedido-ms/api/v1/pedidos/{idPedido}/status/{status}"
+    url: ${URL_PEDIDO:http://localhost:5000/pedido-ms}
+    busca: "/api/v1/pedidos/{idPedido}/buscar"
+    status: "/api/v1/pedidos/{idPedido}/status/{status}"
 
-
-queue01:
+queues:
   confirma_producao: confirma_producao
