@@ -6,11 +6,11 @@ server:
   servlet:
     context-path: /production-ms
 
-gateways:
-  pedidos:
+queues:
+  confirma_producao: confirma_producao
+
+external:
+  gateways:
     url: ${URL_PEDIDO:http://localhost:5000/pedido-ms}
     busca: "/api/v1/pedidos/{idPedido}/buscar"
     status: "/api/v1/pedidos/{idPedido}/status/{status}"
-
-queues:
-  confirma_producao: confirma_producao

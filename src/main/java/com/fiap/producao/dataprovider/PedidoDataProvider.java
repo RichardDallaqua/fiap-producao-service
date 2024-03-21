@@ -20,13 +20,13 @@ import java.util.UUID;
 @Slf4j
 public class PedidoDataProvider implements PedidoGateway {
 
-    @Value("${gateways.pedidos.url}")
-    private static String URL_PEDIDO_SERVICE;
+    @Value("${external.gateways.url}")
+    private String url;
 
-    @Value("${gateways.pedidos.busca}")
-    private static String URL_PEDIDO_SERVICE_BUSCA;
-    @Value("${gateways.pedidos.status}")
-    private static String URL_PEDIDO_SERVICE_STATUS;
+    @Value("${external.gateways.busca}")
+    private String busca;
+    @Value("${external.gateways.status}")
+    private String status;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -37,7 +37,7 @@ public class PedidoDataProvider implements PedidoGateway {
     public PedidoDomain buscarPedido(UUID idPedido) {
 
         WebClient webClient = WebClient.create();
-        PedidoResponseDTO pedidoResponseDTO = webClient.get().uri(URL_PEDIDO_SERVICE.concat(URL_PEDIDO_SERVICE_BUSCA)).accept(MediaType.APPLICATION_JSON)
+        PedidoResponseDTO pedidoResponseDTO = webClient.get().uri(url.concat(busca)).accept(MediaType.APPLICATION_JSON)
                 .retrieve().bodyToMono(PedidoResponseDTO.class).block();
 
         return  pedidoDocumentMapper.toDomain(pedidoResponseDTO);
@@ -47,7 +47,7 @@ public class PedidoDataProvider implements PedidoGateway {
 
         WebClient webClient = WebClient.create();
         PedidoResponseDTO pedidoResponseDTO =  webClient.put()
-                .uri(URL_PEDIDO_SERVICE.concat(URL_PEDIDO_SERVICE_STATUS))
+                .uri(url.concat(status))
                 .contentType(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(PedidoResponseDTO.class)
