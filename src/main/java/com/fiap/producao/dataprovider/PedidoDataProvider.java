@@ -23,11 +23,8 @@ public class PedidoDataProvider implements PedidoGateway {
     @Value("${external.gateways.url}")
     private String url;
 
-    @Value("${external.gateways.busca}")
-    private String busca;
-    @Value("${external.gateways.status}")
-    private String status;
-
+    @Value("${external.gateways.endpoint}")
+    private String endpoint;
     @Autowired
     private ObjectMapper objectMapper;
 
@@ -37,7 +34,7 @@ public class PedidoDataProvider implements PedidoGateway {
     public PedidoDomain buscarPedido(UUID idPedido) {
 
         WebClient webClient = WebClient.create();
-        PedidoResponseDTO pedidoResponseDTO = webClient.get().uri(url.concat(busca)).accept(MediaType.APPLICATION_JSON)
+        PedidoResponseDTO pedidoResponseDTO = webClient.get().uri(url.concat(endpoint).concat(idPedido.toString()).concat("/buscar")).accept(MediaType.APPLICATION_JSON)
                 .retrieve().bodyToMono(PedidoResponseDTO.class).block();
 
         return  pedidoDocumentMapper.toDomain(pedidoResponseDTO);
@@ -47,7 +44,7 @@ public class PedidoDataProvider implements PedidoGateway {
 
         WebClient webClient = WebClient.create();
         PedidoResponseDTO pedidoResponseDTO =  webClient.put()
-                .uri(url.concat(status))
+                .uri(url.concat(endpoint).concat(idPedido.toString()).concat("/status/").concat(statusPedido.name()))
                 .contentType(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(PedidoResponseDTO.class)
