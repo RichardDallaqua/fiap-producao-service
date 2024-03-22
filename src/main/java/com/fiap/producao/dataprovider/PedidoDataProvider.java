@@ -37,7 +37,7 @@ public class PedidoDataProvider implements PedidoGateway {
         PedidoResponseDTO pedidoResponseDTO = webClient.get().uri(url.concat(endpoint).concat(idPedido.toString()).concat("/buscar")).accept(MediaType.APPLICATION_JSON)
                 .retrieve().bodyToMono(PedidoResponseDTO.class).block();
 
-        return  pedidoDocumentMapper.toDomain(pedidoResponseDTO);
+        return pedidoDocumentMapper.toDomain(pedidoResponseDTO);
     }
 
     public PedidoDomain atualizarPedido(UUID idPedido, StatusPedido statusPedido) {
