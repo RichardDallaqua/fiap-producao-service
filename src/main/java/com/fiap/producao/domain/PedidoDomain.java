@@ -22,6 +22,6 @@ public class PedidoDomain {
     private BigDecimal valorTotalDaCompra;
     private int quantidadeTotalDeItems;
     private String nomeCliente;
-    private StatusPedido statusPedido;
+    private String statusPedido;
     private StatusPagamento statusPagamento;
 }
