@@ -1,5 +1,6 @@
 package com.fiap.producao.consumer;
 
+import com.fiap.producao.commons.type.StatusPedido;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +15,5 @@ import java.util.UUID;
 public class ProducaoDTO {
 
     private UUID idPedido;
-    private String status;
+    private StatusPedido status;
 }
